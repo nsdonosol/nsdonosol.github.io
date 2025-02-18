@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header y búsqueda */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.search-bar input {
+    padding: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Noticias principales */
+.main-news img {
+    width: 100%;
+    height: auto;
+}
+
+.secondary-news {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondary-news article {
+    width: 48%;
+}
+
+/* Carrusel */
+.carousel {
+    max-width: 600px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+}
+
+/* numeración en horizontal */
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: #ddd;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+    background: #555;
+    color: white;
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secondary-news {
+        flex-direction: column;
+    }
+
+    .secondary-news article {
+        width: 100%;
+    }
+}

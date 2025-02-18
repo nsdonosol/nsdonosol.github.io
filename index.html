@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias sobre Másters en Tecnología y Universidades en España">
+    <title>Noticias sobre Másters en Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+        .secondary-news img {
+            width: 347px;
+            height: 90px;
+            object-fit: cover;
+        }
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" role="banner">
+            <img src="imagenes/logo.png" alt="Logo del sitio" width="90%" height="90%">
+        </div>
+        <h1>Noticias sobre Másters en Tecnología</h1>
+        <div class="search-bar" role="search">
+            <label for="search">Buscar noticias:</label>
+            <input type="text" id="search" placeholder="Buscar noticias...">
+            <button>🔍</button>
+        </div>
+    </header>
+    <nav role="navigation">
+        <ul>
+            <li><a href="#" id="universidades-link">Universidades</a></li>
+            <li><a href="#" id="programas-link">Programas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main role="main">
+        <article class="main-news">
+            <img src="/imagenes/main-news.jpg" alt="Noticia Principal">
+            <h2>Las universidades españolas más innovadoras de 2024</h2>
+            <p>Los avances tecnológicos están cambiando el panorama profesional y, por ende, también la formación universitaria...</p>
+            <a href="noticiad1.html">Leer más</a>
+        </article>
+        <section class="carousel" aria-label="Noticias destacadas">
+            <div class="carousel-item">
+                <a href="noticiad2.html">
+                    <img src="/imagenes/carousel1.jpg" alt="¿Qué estudiar para dedicarse a la inteligencia artificial?">
+                    <p>¿Qué estudiar para dedicarse a la inteligencia artificial?</p>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="noticiad3.html">
+                    <img src="/imagenes/carousel2.jpg" alt="El 80% de los titulados en Informática encuentra empleo en el primer año tras graduarse">
+                    <p>El 80% de los titulados en Informática encuentra empleo en el primer año tras graduarse</p>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="noticiad4.html">
+                    <img src="/imagenes/carousel3.jpg" alt="Nuevo Máster en Business Analytics de la Universidad Pontificia Comillas">
+                    <p>Nuevo Máster en Business Analytics de la Universidad Pontificia Comillas</p>
+                </a>
+            </div>
+        </section>
+        <section class="secondary-news">
+            <article>
+                <img src="imagenes/thumb1.png" alt="Noticia 1">
+                <h3><a href="noticia1.html">Barcelona Tech anuncia becas</a></h3>
+                <p>Barcelona Tech ha anunciado nuevas becas para estudiantes interesados en tecnología e innovación...</p>
+            </article>
+            <article>
+                <img src="imagenes/thumb2.jpg" alt="Noticia 2">
+                <h3><a href="noticia2.html">El curso de la Universidad de Valencia para programar: es gratis</a></h3>
+                <p>La Universidad de Valencia lanza curso gratuito para aprender Python, uno de los lenguajes de programación más demandados...</p>
+            </article>
+            <article>
+                <img src="imagenes/thumb3.png" alt="Noticia 3">
+                <h3><a href="noticia3.html">¿Por qué estudiar un máster en ciberseguridad?</a></h3>
+                <p>Ofrece una alta empleabilidad debido a la demanda de profesionales en todo tipo de sectores...</p>
+            </article>
+        </section>        
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2025 Noticias de Másters en Tecnología</p>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $(".search-bar button").click(function(){
+                alert("Búsqueda en desarrollo...");
+            });
+            $('.carousel').slick({
+                autoplay: true,
+                dots: true,
+                arrows: false
+            });
+            
+            $("#universidades-link").click(function(event) {
+                event.preventDefault();
+                let confirmacion = confirm("Está a punto de salir de esta página para visitar el listado de universidades. ¿Desea continuar?");
+                if (confirmacion) {
+                    window.open("https://www.universidades.gob.es/listado-de-universidades/", "_blank");
+                }
+            });
+
+            $("#programas-link").click(function(event) {
+                event.preventDefault();
+                let confirmacion = confirm("Está a punto de salir de esta página para visitar el listado de programas. ¿Desea continuar?");
+                if (confirmacion) {
+                    window.open("https://www.ciencia.gob.es/qedu.html", "_blank");
+                }
+            });
+
+
+        });
+    </script>
+</body>
+</html>
